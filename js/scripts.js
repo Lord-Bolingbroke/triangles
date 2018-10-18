@@ -23,7 +23,7 @@ $(document).ready(function() {
   // equilateral
   else if ((side1 === side2) && (side2 === side3)) {
     // $("#equilateral").show();
-    $("p#answer").text("Equilateral");
+    $("p#answer").html("Equilateral");
   }
   // scalene
   else if ((side1 != side2 && side1 != side3) && (side3 != side2)) {
@@ -36,8 +36,6 @@ $(document).ready(function() {
   else if (side3 != side2) {
     $("p#answer").text("Isosceles");
   }
-
-
 
     event.preventDefault();
 
