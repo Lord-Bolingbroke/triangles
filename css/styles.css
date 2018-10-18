@@ -1,22 +1,3 @@
 body {
   text-align: center;
 }
-
-
-
-
-#equilateral {
-  display: none;
-}
-
-#isosceles {
-  display: none;
-}
-
-#scalene {
-  display: none;
-}
-
-#notTriangle {
-  display: none;
-}

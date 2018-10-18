@@ -10,16 +10,80 @@ $(document).ready(function() {
     $(".side2").text(side2);
     $(".side3").text(side3);
 
-if ((side1 === side2) && (side2 === side3)) {
-  $("#equilateral").show();
-}
 
-if ((side1 === side2 || side2 === side3)) {
-  $("#isosceles").show();
-}
+  if ((side1 + side2) <= side3)  {
+    $("p#answer").text("NOT A TRIANGLE");
+  }
+  else if ((side2 + side3) <= side1)  {
+    $("p#answer").text("NOT A TRIANGLE");
+  }
+  else if ((side1 + side3) <= side2)  {
+    $("p#answer").text("NOT A TRIANGLE");
+  }
+  // equilateral
+  else if ((side1 === side2) && (side2 === side3)) {
+    // $("#equilateral").show();
+    $("p#answer").text("Equilateral");
+  }
+  // scalene
+  else if ((side1 != side2 && side1 != side3) && (side3 != side2)) {
+    $("p#answer").text("Scalene");
+  }
+// isocelese
+  else if (side1 != side3) {
+    $("p#answer").text("Isosceles");
+  }
+  else if (side3 != side2) {
+    $("p#answer").text("Isosceles");
+  }
+
 
 
     event.preventDefault();
 
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if ((side1 === side2) && (side2 === side3)) {
+//   // $("#equilateral").show();
+//   $("p#answer").text("Equilateral");
+// }
+//
+// if (side1  side3) {
+//   $("p#answer").text("Isosceles");
+// }
+//
+// if ((side1 != side2 && side1 != side3) && (side3 != side2)) {
+//   $("p#answer").text("Scalene");
+// }
+//
+// if ((side1 + side2) <= side3)  {
+//   $("p#answer").text("NOT A TRIANGLE");
+// }
+// else if ((side2 + side3) <= side1)  {
+//   $("p#answer").text("NOT A TRIANGLE");
+// }
+// else if ((side1 + side3) <= side2)  {
+//   $("p#answer").text("NOT A TRIANGLE");
+// }
+
+
+
+
+// experimental
